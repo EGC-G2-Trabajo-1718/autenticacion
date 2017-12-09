@@ -14,7 +14,8 @@ class User(AbstractUser):
     role = models.CharField(max_length=10, choices=ROLES, default='ASISTENTE')
     age = models.PositiveIntegerField()
     autonomous_community = models.CharField(max_length=30)
-    name = User.first_name
-    surname = User.last_name
+    name = AbstractUser.first_name
+    surname = AbstractUser.last_name
+
     
     
