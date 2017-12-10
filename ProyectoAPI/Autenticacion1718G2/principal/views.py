@@ -12,6 +12,16 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 # Create your views here.
 
+class JSONResponse(HttpResponse):
 
-   
+    def __init__(self, data, **kwargs):
+        content = JSONRenderer().render(data)
+        kwargs['content_type'] = 'application/json'
+        super(JSONResponse, self).__init__(content, **kwargs)
 
+@csrf_exempt
+def getUsers(request):
+    if request.method == 'GET':
+        usuarios = User.objects.all()
+        serializer = UserSerializer(usuarios, many=True)
+        return JSONResponse(serializer.data)
