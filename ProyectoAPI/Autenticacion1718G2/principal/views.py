@@ -25,3 +25,11 @@ def getUsers(request):
         usuarios = User.objects.all()
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
+
+@csrf_exempt
+def getUser(request, usern):
+    if request.method == 'GET':
+        dato = get_object_or_404(User, username=usern)
+        usuario = User.objects.filter(username=dato)
+        serializer = UserSerializer(usuario)
+        return JSONResponse(serializer.data)
