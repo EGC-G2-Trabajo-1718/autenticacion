@@ -29,7 +29,7 @@ def getUsers(request):
 @csrf_exempt
 def getUser(request, usern):
     if request.method == 'GET':
-        dato = get_object_or_404(Usuario, username=usern)
-        usuario = Usuario.objects.filter(username=dato)
+        #dato = get_object_or_404(Usuario, username=usern)
+        usuario = Usuario.objects.get(username=usern)
         serializer = UserSerializer(usuario)
         return JSONResponse(serializer.data)

@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from principal import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^usuarios/$', views.getUsers),
+    url(r'^usuarios/(.+)/$', views.getUser)
 ]
