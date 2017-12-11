@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, render_to_response, get_object_or_404
-from principal.models import User
+from principal.models import Usuario
 from django.template import RequestContext
 from principal.serializers import UserSerializer
 from rest_framework import generics
@@ -22,14 +22,14 @@ class JSONResponse(HttpResponse):
 @csrf_exempt
 def getUsers(request):
     if request.method == 'GET':
-        usuarios = User.objects.all()
+        usuarios = Usuario.objects.all()
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
 
 @csrf_exempt
 def getUser(request, usern):
     if request.method == 'GET':
-        dato = get_object_or_404(User, username=usern)
-        usuario = User.objects.filter(username=dato)
+        dato = get_object_or_404(Usuario, username=usern)
+        usuario = Usuario.objects.filter(username=dato)
         serializer = UserSerializer(usuario)
         return JSONResponse(serializer.data)
