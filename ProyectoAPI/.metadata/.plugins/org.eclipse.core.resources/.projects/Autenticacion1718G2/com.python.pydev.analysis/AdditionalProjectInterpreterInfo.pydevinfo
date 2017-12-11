@@ -1,0 +1,72 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\.metadata\.plugins\org.eclipse.core.resources\.projects\Autenticacion1718G2\com.python.pydev.analysis\v2_indexcache
+principal.admin|1513010847656929000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\admin.py
+principal.serializers|1513010847850879000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\serializers.py
+Autenticacion1718G2.__init__|1513010846918346000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\__init__.py
+Autenticacion1718G2.wsgi|1513010847096883000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\wsgi.py
+principal.models|1513013057635910000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\models.py
+principal.apps|1513010847693058000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\apps.py
+Autenticacion1718G2.settings|1513012832237643000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\settings.py
+Autenticacion1718G2.urls|1513010847023802000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\urls.py
+manage|1513010847499870000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\manage.py
+principal.views|1513013207245809000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\views.py
+principal.__init__|1513010847515492000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\__init__.py
+principal.tests|1513010847859669000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\tests.py
+principal.migrations.__init__|1513010847778391000|C:\Users\josecarlos\Desktop\Repo EGC\autenticacion\ProyectoAPI\Autenticacion1718G2\principal\migrations\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+12
+12=PrincipalConfig
+7=principal.serializers
+9=Usuario
+2=Autenticacion1718G2.wsgi
+3=principal.views
+11=UserSerializer
+5=principal.models
+10=UserSerializer.Meta
+8=JSONResponse
+4=principal.apps
+1=Autenticacion1718G2.settings
+6=Autenticacion1718G2.urls
+-- END DICTIONARY
+-- START TREE 1
+22
+all|1|ALLOWED_HOSTS!11@
+app|1|application!19@
+aut|1|AUTH_PASSWORD_VALIDATORS!11@
+bas|1|BASE_DIR!11@
+dat|1|DATABASES!11@
+deb|1|DEBUG!11@
+get|2|getUsers!26@getUser!26@
+ins|1|INSTALLED_APPS!11@
+jso|1|JSONResponse!25@
+lan|1|LANGUAGE_CODE!11@
+mid|1|MIDDLEWARE!11@
+pri|1|PrincipalConfig!33@
+rol|1|ROLES!43@
+roo|1|ROOT_URLCONF!11@
+sec|1|SECRET_KEY!11@
+sta|1|STATIC_URL!11@
+tem|1|TEMPLATES!11@
+tim|1|TIME_ZONE!11@
+url|1|urlpatterns!51@
+use|4|USE_TZ!11@UserSerializer!57@USE_I18N!11@USE_L10N!11@
+usu|1|Usuario!41@
+wsg|1|WSGI_APPLICATION!11@
+-- END TREE
+-- START TREE 2
+12
+__i|1|__init__!8&26@
+age|1|age!9&43@
+aut|1|autonomous_community!9&43@
+cre|1|create!10&58@
+fie|1|fields!10&59@
+gen|1|genre!9&43@
+met|1|Meta!11&57@
+mod|1|model!10&59@
+nam|2|name!9&43@name!12&35@
+rol|1|role!9&43@
+sur|1|surname!9&43@
+use|1|user!9&43@
+-- END TREE
