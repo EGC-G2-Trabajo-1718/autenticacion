@@ -10,3 +10,12 @@ class UserSerializer(serializers.ModelSerializer):
         def create(self, validated_data):
 
             return Usuario.objects.create(**validated_data)
+        
+class RoleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
+        fields = ('name','role')
+        
+        def create(self, validated_data):
+
+            return Usuario.objects.create(**validated_data)

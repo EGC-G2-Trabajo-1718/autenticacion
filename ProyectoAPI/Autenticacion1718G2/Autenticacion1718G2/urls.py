@@ -21,5 +21,6 @@ from rest_framework.urlpatterns import format_suffix_patterns
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^usuarios/$', views.getUsers),
-    url(r'^usuarios/(.+)/$', views.getUser)
+    url(r'^usuarios/(.+)/$', views.getUser),
+    url(r'^roles/(.+)/$', views.getRoleUser),
 ]
