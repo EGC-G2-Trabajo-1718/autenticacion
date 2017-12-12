@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, render_to_response, get_object_or_404
 from principal.models import Usuario
 from django.template import RequestContext
-from principal.serializers import UserSerializer
+from principal.serializers import UserSerializer, RoleSerializer
 from rest_framework import generics
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -29,7 +29,16 @@ def getUsers(request):
 @csrf_exempt
 def getUser(request, usern):
     if request.method == 'GET':
-        dato = get_object_or_404(Usuario, username=usern)
-        usuario = Usuario.objects.filter(username=dato)
+        #dato = get_object_or_404(Usuario, username=usern)
+        usuario = Usuario.objects.get(username=usern)
         serializer = UserSerializer(usuario)
+        return JSONResponse(serializer.data)
+    
+@csrf_exempt
+def getRoleUser(request, usern):
+    if request.method == 'GET':
+        usuario = Usuario.objects.get(username=usern)
+        rol = usuario.role
+        nam = usuario.username
+        serializer = RoleSerializer({'name':nam, 'role':rol})
         return JSONResponse(serializer.data)
