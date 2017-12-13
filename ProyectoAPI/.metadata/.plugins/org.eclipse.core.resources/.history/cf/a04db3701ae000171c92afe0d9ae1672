@@ -20,9 +20,9 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^getUsers/$', views.getUsers),
-    url(r'^getUser/(.+)/$', views.getUser),
-    url(r'^getRoleUser/(.+)/$', views.getRoleUser),
+    url(r'^usuarios/$', views.getUsers),
+    url(r'^usuarios/(.+)/$', views.getUser),
+    url(r'^roles/(.+)/$', views.getRoleUser),
     
     #token
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
