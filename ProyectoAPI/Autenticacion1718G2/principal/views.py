@@ -10,6 +10,8 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
+from django.contrib.auth.models import User 
+from rest_framework.authentication import TokenAuthentication
 # Create your views here.
 
 class JSONResponse(HttpResponse):
@@ -39,6 +41,9 @@ def getRoleUser(request, usern):
     if request.method == 'GET':
         usuario = Usuario.objects.get(username=usern)
         rol = usuario.role
-        nam = usuario.username
-        serializer = RoleSerializer({'name':nam, 'role':rol})
+        r= 'True'
+        m= 'Successfull'
+        serializer = RoleSerializer({'result':r,'msg':m, 'role':rol})
         return JSONResponse(serializer.data)
+    
+    
