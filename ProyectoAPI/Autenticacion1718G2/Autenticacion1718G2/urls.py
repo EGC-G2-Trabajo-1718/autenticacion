@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^getUsers/$', views.getUsers),
     url(r'^getUser/(.+)/$', views.getUser),
     url(r'^getRoleUser/(.+)/$', views.getRoleUser),
+    url(r'^getUsersByRole/(.+)/$', views.getUsersByRole),
     
     #token
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

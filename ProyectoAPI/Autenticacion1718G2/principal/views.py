@@ -47,3 +47,10 @@ def getRoleUser(request, usern):
         return JSONResponse(serializer.data)
     
     
+@csrf_exempt
+def getUsersByRole(request, rol):
+    if request.method == 'GET':
+        usuarios = Usuario.objects.filter(role=rol)
+        serializer = UserSerializer(usuarios, many=True)
+        return JSONResponse(serializer.data)
+    

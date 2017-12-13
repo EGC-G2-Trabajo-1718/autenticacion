@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 from django.contrib.auth.models import User
+from numpy import unique
 
 
 ROLES=(('ASISTENTE','asistente'),('PONENTE',"ponente"),('AMBOS','ambos'))
@@ -12,7 +13,7 @@ COMUNIDADES=(('ANDALUCIA','Andalucia'),('ARAGON','Aragon'),('ASTURIAS','Asturias
 
 class Usuario(models.Model):
     usuario = models.OneToOneField(User, primary_key=True)
-    username = models.CharField(max_length=50)
+    username = models.CharField(max_length=50, unique=True)
     genre = models.CharField(max_length=20,choices=GENEROS, default='-----')
     role = models.CharField(max_length=10, choices=ROLES, default='ASISTENTE')
     age = models.PositiveIntegerField()
