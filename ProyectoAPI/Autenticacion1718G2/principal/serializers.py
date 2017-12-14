@@ -5,7 +5,7 @@ from principal.models import Usuario
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ('username','name', 'surname', 'email', 'genre', 'autonomous_community', 'age', 'role')
+        fields = ('result','msg','username','name', 'surname', 'email', 'genre', 'autonomous_community', 'age', 'role')
         
         def create(self, validated_data):
 
@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
 class RoleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ('name','role')
+        fields = ('result','msg','role')
         
         def create(self, validated_data):
 
