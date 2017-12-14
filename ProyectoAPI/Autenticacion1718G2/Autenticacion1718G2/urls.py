@@ -17,6 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from principal import views
 from rest_framework.urlpatterns import format_suffix_patterns
+from principal.views import PostUser
+
+
+post_list = views.PostUser.as_view({
+    'get': 'list',
+    'post': 'create'
+})
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,6 +31,8 @@ urlpatterns = [
     url(r'^getUser/(.+)/$', views.getUser),
     url(r'^getRoleUser/(.+)/$', views.getRoleUser),
     url(r'^getUsersByRole/(.+)/$', views.getUsersByRole),
+    url(r'^postUser/$', post_list, name='post_list'), 
+
     
     #token
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

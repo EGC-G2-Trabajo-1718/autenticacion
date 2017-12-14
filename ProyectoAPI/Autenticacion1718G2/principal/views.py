@@ -12,6 +12,10 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from django.contrib.auth.models import User 
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.decorators import api_view 
+from rest_framework import viewsets, status
+
+
 # Create your views here.
 
 class JSONResponse(HttpResponse):
@@ -21,14 +25,14 @@ class JSONResponse(HttpResponse):
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
 
-@csrf_exempt
+
 def getUsers(request):
     if request.method == 'GET':
         usuarios = Usuario.objects.all()
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
 
-@csrf_exempt
+
 def getUser(request, usern):
     if request.method == 'GET':
         #dato = get_object_or_404(Usuario, username=usern)
@@ -36,7 +40,7 @@ def getUser(request, usern):
         serializer = UserSerializer(usuario)
         return JSONResponse(serializer.data)
     
-@csrf_exempt
+
 def getRoleUser(request, usern):
     if request.method == 'GET':
         usuario = Usuario.objects.get(username=usern)
@@ -47,10 +51,15 @@ def getRoleUser(request, usern):
         return JSONResponse(serializer.data)
     
     
-@csrf_exempt
+
 def getUsersByRole(request, rol):
     if request.method == 'GET':
         usuarios = Usuario.objects.filter(role=rol)
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
+    
+class PostUser(viewsets.ModelViewSet):
+    queryset = Usuario.objects.all()
+    serializer_class = UserSerializer
+
     
