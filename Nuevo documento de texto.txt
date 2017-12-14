@@ -1,0 +1,11 @@
+pychart entorno grafico ¿?
+instalar eclipse neon en ubuntu porque docker esta en ubuntu
+python 2.7
+y django ?¿?
+
+Hacer mockup de formulario de registro
+
+prguntar a espi donde esta el cuerpo del commit o hacer uno de ejemplo
+hacer tablas 
+
+
