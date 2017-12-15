@@ -32,5 +32,5 @@ urlpatterns = [
     
     #Plantillas
     #url(r'^', include('Autenticacion1718G2.principal.urls')),
-   
+    url(r'^$', views.index_view),
 ]
