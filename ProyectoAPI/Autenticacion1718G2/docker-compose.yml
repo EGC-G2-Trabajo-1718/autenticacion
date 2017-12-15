@@ -10,11 +10,14 @@ services:
 
   djangorest:
     build: .
-    command: python manage.py runserver 127.0.0.1:50020
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
-      - "50020:50020"
+      - "8000:8000"
     depends_on:
       - db
 
+volumes:
+  db_data:
+    external: true
