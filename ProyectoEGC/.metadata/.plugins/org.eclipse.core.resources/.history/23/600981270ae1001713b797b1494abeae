@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <title>{% block titulo %}Inicio{% endblock %}</title>
+  {% block style_css %}{% endblock %}
+</head>
+<body>
+  <header>
+	{% block encabezado %}<h1>Practica Django G2</h1>{% endblock %}
+	<nav>
+	  <ul id='menu'>
+		  <li><a href='/'>Inicio</a></li>
+		  <li><a href='/form1'>Formulario1</a></li>
+		  <li><a href='/usuario/nuevo'>Nuevo usuario</a></li>
+		  <li><a href='/iniciosesion'>Iniciar sesión</a></li>
+		  <li><a href='/cerrar'>Cerrar sesión</a></li>
+		  
+    </ul>
+	</nav>
+	<hr>
+  </header>	
+  <section class='contenido'>
+	{% block contenido %}
+	<p>Pagina web de la practica de Django del grupo 2.</p>
+	<ul id='alumnos'>
+		  <li>Jose Angel Dominguez Espinaco</li>
+		  <li>Jose Carlos Garcia Rodriguez</li>
+		  <li>Tania Salguero Alvarez</li>
+
+		  
+    </ul>
+	{% endblock %}
+  </section>
+</body>
+</html>

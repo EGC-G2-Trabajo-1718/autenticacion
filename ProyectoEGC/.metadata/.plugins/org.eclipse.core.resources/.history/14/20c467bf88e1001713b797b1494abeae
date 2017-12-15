@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Autenticación</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="Autenticacion1718G2/plantillas/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Autenticacion1718G2/plantillas/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <h1>Registro de un nuevo usuario</h1>
+
+  </head>
+  <body>
+
+<form id='formulario' method="post">
+
+<label for="username">Nombre de usuario:</label>
+<input name="username" type="text" value="{{username}}"/><br />
+
+<label for="password">Contraseña:</label>
+<input type="password" name="password" type="text" value="{{password}}"/><br />
+
+<label for="name">Nombre:</label>
+<input name="name" type="text" value="{{nombre}}"/><br />
+
+<label for="surname">Apellidos:</label>
+<input name="surname" type="text" value="{{apellidos}}"/><br />
+
+<label for="email">Email:</label>
+<input type="email" name="email" type="text" value="{{email}}"/><br />
+
+<label for="genre">Género:</label>
+<select name="genre" id="genre">
+	<option value="0">MASCULINO</option>
+	<option value="1">FEMENINO</option>
+</select><br/>
+
+<label for="autonomus_comunity">Comunidad autónoma:</label>
+<select name="comunidad" id="comunidad">
+	<option value="0">Escoja una de estas opciones</option>
+	<option value="Andalucia">Andalucía</option>
+	<option value="Aragon">Aragón</option>
+	<option value="Principado de Asturias">Principado de Asturias</option>
+	<option value="Islas Baleares">Islas Baleares</option>
+	<option value="Pais Vasco">País Vasco</option>
+	<option value="Canarias">Canarias</option>
+	<option value="Cantabria">Cantabria</option>
+	<option value="Castilla-La Mancha">Castilla-La Mancha</option>
+	<option value="Castilla y Leon">Castilla y León</option>
+	<option value="Catalunia">Cataluña</option>
+	<option value="Extremadura">Extremadura</option>
+	<option value="Galicia">Galicia</option>
+	<option value="Comunidad de Madrid">Comunidad de Madrid</option>
+	<option value="Region de Murcia">Región de Murcia</option>
+	<option value="Comunidad Foral de Navarra">Comunidad Foral de Navarra</option>
+	<option value="La Rioja">La Rioja</option>
+	<option value="Comunidad Valenciana">Comunidad Valenciana</option>
+	<option value="Ceuta">Ceuta</option>
+	<option value="Melilla">Melilla</option>
+</select><br/>
+
+<label for="age">Edad:</label>
+<input name="age" type="text" value="{{age}}"/><br />
+
+<label for="role">Rol:</label>
+<select name="reole" id="rol">
+	<option value="0">PONENTE</option>
+	<option value="1">ASISTENTE</option>
+	<option value="2">AMBOS</option>
+</select><br/>
+
+<input name="" type="submit" value="Guardar"/>
+</form>
+ </body>
+</html>

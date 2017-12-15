@@ -1,0 +1,14 @@
+INSTUPprincipal.views
+C:\Users\user\Desktop\ProyectoEGC\Autenticacion1718\principal\views.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&1|5|2|0&&2|6|2|5&&2|7|2|0&&2|8|2|0&&2|9|2|0&&2|10|2|0&&2|11|2|0
+getRoleUser=10
+getUsersByRole=11
+JINJA_ENVIRONMENT=1
+nuevo_usuario=4
+principal.views=2
+getUsers=8
+get=7
+getUser=9
+index_view=3
+__init__=6
+JSONResponse=5
