@@ -13,27 +13,14 @@
     <link href="Autenticacion1718G2/plantillas/css/bootstrap.min.css" rel="stylesheet">
     <link href="Autenticacion1718G2/plantillas/css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <h1>Registro de un nuevo usuario</h1>
 
   </head>
   <body>
 
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<h3>
-				Autenticación de usuario
-			</h3>
-			<form id='formaulario' method='POST' action=''> {% csrf_token %}
+<form id='formaulario' method='POST' action=''> {% csrf_token %}
 				<table>{{formulario}}</table>
 				<p><input type='submit' value='Aceptar'/></p>
-				<a href="nuevousuario.html">Registro</a>
-			</form>
-		</div>
-	</div>
-</div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+</form>
+ </body>
 </html>

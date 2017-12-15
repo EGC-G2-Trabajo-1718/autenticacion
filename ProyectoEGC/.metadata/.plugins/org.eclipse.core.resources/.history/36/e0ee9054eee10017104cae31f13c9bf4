@@ -26,7 +26,6 @@
 			<form id='formaulario' method='POST' action=''> {% csrf_token %}
 				<table>{{formulario}}</table>
 				<p><input type='submit' value='Aceptar'/></p>
-				<a href="nuevousuario.html">Registro</a>
 			</form>
 		</div>
 	</div>
