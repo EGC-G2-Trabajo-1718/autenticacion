@@ -48,7 +48,13 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_auth.registration',
+    'django_jenkins'
 ]
+
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pep8',
+    #Aqui se añaden los test que se quieran realizar
+)
 
 SITE_ID=1
 
