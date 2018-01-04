@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import jinja2
+from django.core.urlresolvers import reverse_lazy
 from django.conf.global_settings import EMAIL_BACKEND
 from rest_auth.tests.settings import REST_FRAMEWORK
 RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
@@ -143,3 +144,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+
+#Aqui pondremos la pagina principal del usuario
+#LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'egcpgpi1718@gmail.com'
+EMAIL_HOST_PASSWORD = 'damian01'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

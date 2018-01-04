@@ -17,7 +17,16 @@ from lib2to3.fixes.fix_input import context
 #from django.contrib.auth.tests.forms import UserCreationFormTest
 from django.http.response import HttpResponseRedirect
 # Create your views here.
+import json
+from rest_framework.views import APIView
 
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import CreateView
+from django.core.urlresolvers import reverse_lazy
+
+from django.contrib.auth.forms import RegistroForm
 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
@@ -123,3 +132,11 @@ def getUsersByRole(request, rol):
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
     
+
+
+class RegistroUsuario(CreateView):
+    model = User
+    template_name = "registrar.html"
+    form_class = RegistroForm
+    #success_url = reverse_lazy('mascota:mascota_listar')
+

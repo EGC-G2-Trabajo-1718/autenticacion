@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.views import login, password_reset, password_reset_done, password_reset_confirm, password_reset_complete
+from django.conf.urls import url
 from principal import views
+from principal.views import RegistroUsuario
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
@@ -32,6 +35,25 @@ urlpatterns = [
     
     #Plantillas
     #url(r'^', include('Autenticacion1718G2.principal.urls')),
-    url(r'^$', views.index_view),
-    url(r'^', views.nuevo_usuario)
+    #url(r'^$', views.index_view),
+    url(r'^$', login, {'template_name':'index.html'}, name='login'),
+    url(r'^reset/password_reset', password_reset, {'template_name':'registration/password_reset_form.html',
+        'email_template_name': 'registration/password_reset_email.html'}, 
+        name='password_reset'), 
+    
+    url(r'^password_reset_done', password_reset_done, {'template_name': 'registration/password_reset_done.html'}, 
+        name='password_reset_done'),
+    
+    url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>.+)/$', password_reset_confirm, {'template_name': 'registration/password_reset_confirm.html'},
+        name='password_reset_confirm'),
+    
+    url(r'^reset/done', password_reset_complete, {'template_name': 'registration/password_reset_complete.html'},
+        name='password_reset_complete'),
+
+
+    url(r'^registrar', RegistroUsuario.as_view(), name="registrar"),
+     url(r'^', views.nuevo_usuario),
 ]
+
+    
+  

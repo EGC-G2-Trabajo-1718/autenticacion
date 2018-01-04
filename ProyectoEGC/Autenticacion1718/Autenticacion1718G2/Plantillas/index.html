@@ -1,39 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base/base.html' %}
 
-    <title>Autenticación</title>
+{% block title %}
+Inicio de sesion
+{% endblock %}
+{% block navbar%}
+{% endblock %}
+{% block content %}
+<form method="post">
+	{% csrf_token %}
+	 <div class="row">
+    	<div class="col-md-6 col-md-offset-3">
+    		<div class="form-group">
+        		<label for="username">Nombre de usuario:</label>
+        		<input class="form-control" type="text" name="username">
+    	   </div>
+        </div>
+    </div>    
+    <div class="row">
+    	<div class="col-md-6 col-md-offset-3">
+    		<div class="form-group">
+        		<label for="username">Contraseña:</label>
+        		<input class="form-control" type="password" name="password">
+    	   </div>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-md-6 col-md-offset-3">
+    		<div class="form-group">
+    		<input class="btn btn-primary" type="submit" value="Ingresar"><br>
+                <a href="{% url 'password_reset' %}">Olvidé mi contraseña</a><br>
+                 <a href="nuevousuario.html">Nuevo usuario</a>
+    	   </div>
+        </div>
+    </div>
+</form>
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
 
-    <link href="Autenticacion1718G2/plantillas/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Autenticacion1718G2/plantillas/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-
-  </head>
-  <body>
-
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<h3>
-				Autenticación de usuario
-			</h3>
-			<form id='formaulario' method='POST' action=''> {% csrf_token %}
-				<table>{{formulario}}</table>
-				<p><input type='submit' value='Aceptar'/></p>
-				<a href="nuevousuario.html">Registro</a>
-			</form>
-		</div>
-	</div>
-</div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
-</html>
+{% endblock %}
