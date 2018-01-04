@@ -12,10 +12,10 @@ principal.migrations.0002_auto_20171211_2158|1513199712000000000|C:\Users\user\D
 principal.apps|1513204198000000000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\apps.py
 principal.migrations.0001_initial|1513199712000000000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\migrations\0001_initial.py
 Autenticacion1718G2.settings|1513285996815810000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\Autenticacion1718G2\settings.py
-Autenticacion1718G2.urls|1513336753846591000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\Autenticacion1718G2\urls.py
+Autenticacion1718G2.urls|1513380205652603000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\Autenticacion1718G2\urls.py
 manage|1513199712000000000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\manage.py
 principal.migrations.0003_auto_20171211_2200|1513199712000000000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\migrations\0003_auto_20171211_2200.py
-principal.views|1513336833526575000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\views.py
+principal.views|1513380342901255000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\views.py
 principal.__init__|1513199712000000000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\__init__.py
 principal.jinja2|1513268461249030000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\jinja2.py
 principal.migrations.0006_auto_20171213_1907|1513199712000000000|C:\Users\user\Documents\GitHub\autenticacion\ProyectoEGC\Autenticacion1718\principal\migrations\0006_auto_20171213_1907.py
@@ -48,7 +48,7 @@ principal.migrations.__init__|1513199712000000000|C:\Users\user\Documents\GitHub
 15=JSONResponse
 -- END DICTIONARY
 -- START TREE 1
-32
+34
 all|1|ALLOWED_HOSTS!11@
 app|1|application!19@
 aut|2|AUTH_PASSWORD_VALIDATORS!11@AUTHENTICATION_BACKENDS!11@
@@ -60,6 +60,7 @@ ema|1|EMAIL_BACKEND!11@
 env|1|env!35@
 gen|1|GENEROS!27@
 get|5|getUsersByRole!42@getUsers!42@get!42@getRoleUser!42@getUser!42@
+ind|1|index_view!42@
 ini|1|ini_jinja2!34@
 ins|1|INSTALLED_APPS!11@
 jin|1|JINJA_ENVIRONMENT!43@
@@ -67,6 +68,7 @@ jso|1|JSONResponse!41@
 lan|1|LANGUAGE_CODE!11@
 mid|1|MIDDLEWARE!11@
 mig|6|Migration!49@Migration!57@Migration!65@Migration!73@Migration!81@Migration!89@
+nue|1|nuevo_usuario!42@
 pri|1|PrincipalConfig!97@
 res|1|REST_FRAMEWORK!11@
 rol|2|RoleSerializer!105@ROLES!27@
