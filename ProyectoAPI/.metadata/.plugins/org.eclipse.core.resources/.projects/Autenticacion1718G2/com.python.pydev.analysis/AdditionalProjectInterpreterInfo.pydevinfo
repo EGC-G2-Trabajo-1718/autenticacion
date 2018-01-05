@@ -1,57 +1,39 @@
 -- VERSION_4
 -- START DISKCACHE_2
-C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\.metadata\.plugins\org.eclipse.core.resources\.projects\Autenticacion1718G2\com.python.pydev.analysis\v2_indexcache
-principal.admin|1515166625374839000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\admin.py
-principal.serializers|1515166625446347000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\serializers.py
-principal.migrations.0005_auto_20171213_1358|1515166625421846000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0005_auto_20171213_1358.py
-Autenticacion1718G2.__init__|1515166625307330000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\__init__.py
-Autenticacion1718G2.wsgi|1515166625325833000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\wsgi.py
-principal.models|1515166625441849000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\models.py
-principal.migrations.0002_auto_20171211_1900|1515166625397341000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0002_auto_20171211_1900.py
-principal.migrations.0004_auto_20171212_0949|1515166625414844000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0004_auto_20171212_0949.py
-principal.migrations.0002_auto_20171211_2158|1515166625404844000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0002_auto_20171211_2158.py
-principal.apps|1515166625381840000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\apps.py
-principal.migrations.0001_initial|1515166625390342000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0001_initial.py
-Autenticacion1718G2.settings|1515166625314331000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\settings.py
-Autenticacion1718G2.urls|1515166625320332000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\urls.py
-manage|1515166625365838000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\manage.py
-principal.migrations.0007_merge_20171214_1752|1515166625432848000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0007_merge_20171214_1752.py
-principal.migrations.0003_auto_20171211_2200|1515166625409843000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0003_auto_20171211_2200.py
-principal.views|1515166625453349000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\views.py
-principal.__init__|1515166625369837000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\__init__.py
-principal.migrations.0006_auto_20171213_1907|1515166625428347000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\0006_auto_20171213_1907.py
-principal.tests|1515166625450849000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\tests.py
-principal.migrations.__init__|1515166625436346000|C:\Users\josecarlos\Desktop\aut que vale en mi clipse\ProyectoAPI\Autenticacion1718G2\principal\migrations\__init__.py
+C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\.metadata\.plugins\org.eclipse.core.resources\.projects\Autenticacion1718G2\com.python.pydev.analysis\v2_indexcache
+principal.admin|1515166625374839000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\admin.py
+principal.serializers|1515166625446347000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\serializers.py
+Autenticacion1718G2.__init__|1515166625307330000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\__init__.py
+Autenticacion1718G2.wsgi|1515166625325833000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\wsgi.py
+principal.views|1515166625453349000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\views.py
+principal.__init__|1515166625369837000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\__init__.py
+principal.models|1515166625441849000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\models.py
+principal.tests|1515166625450849000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\tests.py
+principal.apps|1515166625381840000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\apps.py
+Autenticacion1718G2.settings|1515166625314331000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\settings.py
+Autenticacion1718G2.urls|1515166625320332000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\urls.py
+manage|1515166625365838000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\manage.py
 -- END DISKCACHE
 -- START DICTIONARY
-24
-15=principal.serializers
-9=principal.migrations.0005_auto_20171213_1358
-17=Usuario
+15
+7=principal.serializers
+9=Usuario
 2=Autenticacion1718G2.wsgi
-20=Migration
-21=UserSerializer
+12=UserSerializer
 3=principal.models
-12=principal.migrations.0002_auto_20171211_1900
-18=UserSerializer.Meta
-7=principal.migrations.0004_auto_20171212_0949
-11=principal.migrations.0002_auto_20171211_2158
-10=principal.migrations.0001_initial
-14=principal.apps
+10=UserSerializer.Meta
+6=principal.apps
 1=Autenticacion1718G2.settings
-6=principal.migrations.0007_merge_20171214_1752
-13=Autenticacion1718G2.urls
-23=PrincipalConfig
-24=PostUser
-8=principal.migrations.0003_auto_20171211_2200
+5=Autenticacion1718G2.urls
+14=PrincipalConfig
+15=PostUser
 4=principal.views
-19=RoleSerializer.Meta
-5=principal.migrations.0006_auto_20171213_1907
-22=RoleSerializer
-16=JSONResponse
+11=RoleSerializer.Meta
+13=RoleSerializer
+8=JSONResponse
 -- END DICTIONARY
 -- START TREE 1
-29
+28
 all|1|ALLOWED_HOSTS!11@
 app|1|application!19@
 aut|2|AUTH_PASSWORD_VALIDATORS!11@AUTHENTICATION_BACKENDS!11@
@@ -66,44 +48,40 @@ ins|1|INSTALLED_APPS!11@
 jso|1|JSONResponse!33@
 lan|1|LANGUAGE_CODE!11@
 mid|1|MIDDLEWARE!11@
-mig|8|Migration!41@Migration!49@Migration!57@Migration!65@Migration!73@Migration!81@Migration!89@Migration!97@
-pos|2|PostUser!33@post_list!107@
-pri|1|PrincipalConfig!113@
+pos|2|PostUser!33@post_list!43@
+pri|1|PrincipalConfig!49@
 res|1|REST_FRAMEWORK!11@
-rol|2|RoleSerializer!121@ROLES!27@
+rol|2|RoleSerializer!57@ROLES!27@
 roo|1|ROOT_URLCONF!11@
 sec|1|SECRET_KEY!11@
 sit|1|SITE_ID!11@
 sta|1|STATIC_URL!11@
 tem|1|TEMPLATES!11@
 tim|1|TIME_ZONE!11@
-url|1|urlpatterns!107@
-use|4|USE_TZ!11@UserSerializer!121@USE_I18N!11@USE_L10N!11@
+url|1|urlpatterns!43@
+use|4|USE_TZ!11@UserSerializer!57@USE_I18N!11@USE_L10N!11@
 usu|1|Usuario!25@
 wsg|1|WSGI_APPLICATION!11@
 -- END TREE
 -- START TREE 2
-22
-__i|1|__init__!16&34@
-__u|1|__unicode__!17&26@
-age|1|age!17&27@
-aut|1|autonomous_community!17&27@
-cre|2|create!18&122@create!19&122@
-dep|8|dependencies!20&91@dependencies!20&83@dependencies!20&99@dependencies!20&43@dependencies!20&67@dependencies!20&51@dependencies!20&59@dependencies!20&75@
-ema|1|email!17&27@
-fie|2|fields!18&123@fields!19&123@
-gen|1|genre!17&27@
-ini|1|initial!20&83@
-met|2|Meta!21&121@Meta!22&121@
-mod|2|model!18&123@model!19&123@
-msg|1|msg!17&27@
-nam|2|name!17&27@name!23&115@
-ope|8|operations!20&59@operations!20&51@operations!20&99@operations!20&83@operations!20&43@operations!20&67@operations!20&75@operations!20&91@
-que|1|queryset!24&35@
-res|1|result!17&27@
-rol|1|role!17&27@
-ser|1|serializer_class!24&35@
-sur|1|surname!17&27@
-use|1|username!17&27@
-usu|1|usuario!17&27@
+19
+__i|1|__init__!8&34@
+__u|1|__unicode__!9&26@
+age|1|age!9&27@
+aut|1|autonomous_community!9&27@
+cre|2|create!10&58@create!11&58@
+ema|1|email!9&27@
+fie|2|fields!10&59@fields!11&59@
+gen|1|genre!9&27@
+met|2|Meta!12&57@Meta!13&57@
+mod|2|model!10&59@model!11&59@
+msg|1|msg!9&27@
+nam|2|name!9&27@name!14&51@
+que|1|queryset!15&35@
+res|1|result!9&27@
+rol|1|role!9&27@
+ser|1|serializer_class!15&35@
+sur|1|surname!9&27@
+use|1|username!9&27@
+usu|1|usuario!9&27@
 -- END TREE
