@@ -19,3 +19,12 @@ class RoleSerializer(serializers.ModelSerializer):
         def create(self, validated_data):
 
             return Usuario.objects.create(**validated_data)
+        
+class TokenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
+        fields = ('result','msg')
+        
+        def create(self, validated_data):
+
+            return Usuario.objects.create(**validated_data)        
