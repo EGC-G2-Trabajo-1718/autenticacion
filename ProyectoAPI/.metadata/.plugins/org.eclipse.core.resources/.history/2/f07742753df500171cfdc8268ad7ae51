@@ -39,8 +39,6 @@ urlpatterns = [
 
     url(r'^checkTokenUser/(.+)/(.+)/$',views2.checkTokenUser), 
     url(r'^api-token-auth/', views.obtain_auth_token),
-    url(r'^checkToken/(.+)/$',views2.checkToken), 
-
     #token
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^rest-auth/', include('rest_auth.urls')),

@@ -110,4 +110,17 @@ def checkTokenUser(request, nomUs, tokenUrl):
 
    
 
+@api_view(['GET'])
+def checkToken(request, tokenUrl):     
     
+    if request.method == 'GET':
+        user1 = User.objects.get(auth_token = tokenUrl)
+        token2, created = Token.objects.get_or_create(user=user1)
+        if(token2.key ==  tokenUrl):
+            r = 'True'
+            m= 'Successfull'
+        else:
+            r = 'False'
+            m ='Error'
+        serializer = TokenSerializer({'result': r, 'msg': m})
+        return JSONResponse(serializer.data)   
