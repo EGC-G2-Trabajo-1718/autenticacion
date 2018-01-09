@@ -37,8 +37,7 @@ urlpatterns = [
     url(r'^getUsersByRole/(.+)/$', views2.getUsersByRole),
     url(r'^postUser/$', post_list, name='post_list'), 
 
-    url(r'^crearToken/',views2.crearToken), 
-#     url(r'^loguearte/',views2.loguearte), 
+    url(r'^checkTokenUser/(.+)/(.+)/$',views2.checkTokenUser), 
     url(r'^api-token-auth/', views.obtain_auth_token),
     #token
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

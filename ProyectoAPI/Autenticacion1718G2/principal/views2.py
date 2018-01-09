@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import cgi
 from principal.models import Usuario
 from principal.serializers import UserSerializer, RoleSerializer,\
     TokenSerializer
@@ -89,22 +90,23 @@ class PostUser(viewsets.ModelViewSet):
 # #     ver_source = respuesta.read()
 #     #Esto es opcional -> print ver_source
 #     abrir_conexion.close()  
-  
+
 # 
-def crearToken(nomUs):
-    user1 = User.objects.get(username=nomUs)#, username="josecarlos", genre="Masculino", role="Asistente", age="20",autonomous_community="Andalucia", name="Jose Carlos", surname="Garcia", email="josecarlos.jcgr24@gmail.com")
-#     for userDef in users:
-#         if(userDef == nomUs):
-#             user1 = userDef
-    token2 = Token.objects.get_or_create(user=user1)
-    if(token2[0] ==  "354e8d2fc57118eb680daf5e533e799dff64692d"):
-        r = 'True'
-        m= 'Successfull'
-    else:
-        r = 'False'
-        m ='Error'
-    serializer = TokenSerializer({'result': r, 'msg': m})
-    return JSONResponse(serializer.data)    
+@api_view(['GET'])
+def checkTokenUser(request, nomUs, tokenUrl): 
+    
+    if request.method == 'GET':
+        user1 = User.objects.get(auth_token = tokenUrl)
+        # token2, created = Token.objects.get_or_create(user=user1)
+        #     if(token2[0].key ==  "354e8d2fc57118eb680daf5e533e799dff64692d"):
+        if(user1.username == nomUs):
+            r = 'True'
+            m= 'Successfull'
+        else:
+            r = 'False'
+            m ='Error'
+        serializer = TokenSerializer({'result': r, 'msg': m})
+        return JSONResponse(serializer.data)    
 
    
 
