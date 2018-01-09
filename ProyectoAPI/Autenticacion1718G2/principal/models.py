@@ -5,10 +5,13 @@ from django.db import models
 
 from django.contrib.auth.models import User
 from numpy import unique
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
 
-ROLES=(('ASISTENTE','asistente'),('PONENTE',"ponente"),('AMBOS','ambos'))
-GENEROS=(('MASCULINO','masculino'),('FEMENINO',"femenino"))
+ROLES=(('ASISTENTE','Asistente'),('PONENTE',"Ponente"),('AMBOS','Ambos'))
+GENEROS=(('MASCULINO','Masculino'),('FEMENINO',"Femenino"))
 COMUNIDADES=(('ANDALUCIA','Andalucia'),('ARAGON','Aragon'),('ASTURIAS','Asturias'),('CANTABRIA','Cantabria'),('CASTILLA LA MANCHA','Castilla la mancha'),('CASTILLA LEON','Castilla leon'),('EXTREMADURA','Extremadura'),('GALICIA','Galicia'),('LA RIOJA','La rioja'),('MADRID','Madrid'),('MURCIA','Murcia'),('NAVARRA','Navarra'),('PAIS VASCO','Pais vasco'),('VALENCIA','Valencia'),('BALEARES','Baleares'),('CANARIAS','Canarias'),('CEUTA','Ceuta'),('MELILLA','Melilla'))
 
 class Usuario(models.Model):
@@ -26,7 +29,13 @@ class Usuario(models.Model):
     
     def __unicode__(self):
         return self.name
-    
+    from django.conf import settings
+
+
+    @receiver(post_save, sender=settings.AUTH_USER_MODEL)
+    def create_auth_token(self,sender, instance=None, created=False, **kwargs):
+        if created:
+            Token.objects.create(user=instance)
 
     
     

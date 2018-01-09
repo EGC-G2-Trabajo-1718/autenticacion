@@ -1,1 +1,14 @@
-DELSTRprincipal.migrations.0004_auto_20171212_0949
+INSTUPprincipal.views2
+C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\views2.py
+INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&1|8|2|0&&3|9|2|8&&3|10|2|8&&2|11|2|0
+getRoleUser=6
+PostUser=8
+getUsersByRole=7
+serializer_class=10
+getUsers=4
+getUser=5
+__init__=3
+queryset=9
+JSONResponse=1
+crearToken=11
+principal.views2=2

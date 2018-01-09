@@ -1,0 +1,111 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from principal.models import Usuario
+from principal.serializers import UserSerializer, RoleSerializer,\
+    TokenSerializer
+from django.http import HttpResponse
+from rest_framework.renderers import JSONRenderer
+from django.contrib.auth.models import User 
+from rest_framework.decorators import api_view 
+from rest_framework import viewsets
+
+from rest_framework.authtoken.models import Token
+
+# Create your views here.
+
+class JSONResponse(HttpResponse):
+
+    def __init__(self, data, **kwargs):
+        content = JSONRenderer().render(data)
+        kwargs['content_type'] = 'application/json'
+        super(JSONResponse, self).__init__(content, **kwargs)
+
+@api_view(['GET'])
+def getUsers(request):
+    if request.method == 'GET':
+        usuarios = Usuario.objects.all()
+        serializer = UserSerializer(usuarios, many=True)
+        return JSONResponse(serializer.data)
+
+@api_view(['GET'])
+def getUser(request, usern):
+    if request.method == 'GET':
+        #dato = get_object_or_404(Usuario, username=usern)
+        usuario = Usuario.objects.get(username=usern)
+        serializer = UserSerializer(usuario)
+        return JSONResponse(serializer.data)
+    
+@api_view(['GET'])
+def getRoleUser(request, usern):
+    if request.method == 'GET':
+        usuario = Usuario.objects.get(username=usern)
+        rol = usuario.role
+        r= 'True'
+        m= 'Successfull'
+        serializer = RoleSerializer({'result':r,'msg':m, 'role':rol})
+        return JSONResponse(serializer.data)
+    
+    
+@api_view(['GET'])
+def getUsersByRole(request, rol):
+    if request.method == 'GET':
+        usuarios = Usuario.objects.filter(role=rol)
+        serializer = UserSerializer(usuarios, many=True)
+        return JSONResponse(serializer.data)
+#     
+# def checkToken(request, token, usuarion, passw):
+#     if request.method == 'GET':
+#         tokenCreado = token.TokenEndpoint.create_token_response( uri = "http://127.0.0.1:8000/rest-auth/login/", http_method = "POST", body= {"username": usuarion, "password": passw}, headers = {"content-type": "application/json"}, credentials = None, grant_type_for_scope = None, claims = None)#averiguar como apartir del token sacar el usuario
+#         if(tokenCreado == token):
+#             r = 'True'
+#             m= 'Successfull'
+#             serializer = TokenSerializer({'result': r, 'msg': m})
+#         return JSONResponse(serializer.data)    
+      
+# class UserView(RetrieveAPIView):
+#     model = User
+#     serializer_class = UserSerializer
+# 
+#     def retrieve(self, request, pk=None):
+#         """
+#         If provided 'pk' is "me" then return the current user.
+#         """
+#         if request.user and pk == 'me':
+#             return Response(UserSerializer(request.user).data)
+#         return super(UserView, self).retrieve(request, pk)
+    
+class PostUser(viewsets.ModelViewSet):
+    queryset = Usuario.objects.all()
+    serializer_class = UserSerializer
+    
+# def loguearte(usernombre):    
+#     parametros = urllib.urlencode({'username': usernombre,'password':'abcdabcd'})
+#     cabeceras = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
+#     abrir_conexion = httplib.HTTPConnection("http://localhost:8000/api-token-auth/:8000")
+#     abrir_conexion.request("POST", parametros, cabeceras)
+#     respuesta = abrir_conexion.getresponse()
+#     print respuesta.status
+# #     ver_source = respuesta.read()
+#     #Esto es opcional -> print ver_source
+#     abrir_conexion.close()  
+  
+# 
+def crearToken(nomUs):
+    user1 = User.objects.get(Username=nomUs)#, username="josecarlos", genre="Masculino", role="Asistente", age="20",autonomous_community="Andalucia", name="Jose Carlos", surname="Garcia", email="josecarlos.jcgr24@gmail.com")
+#     for userDef in users:
+#         if(userDef == nomUs):
+#             user1 = userDef
+    token2 = Token.objects.get_or_create(user=user1)
+    if(token2 ==  "354e8d2fc57118eb680daf5e533e799dff64692d"):
+        r = 'True'
+        m= 'Successfull'
+    else:
+        r = 'False'
+        m ='Error'
+    serializer = TokenSerializer({'result': r, 'msg': m})
+    return JSONResponse(serializer.data)    
+
+   
+
+    
