@@ -5,8 +5,13 @@ python:
     - "2.7"
 
 
+
+env:	    - DJANGO_VERSION=1.11
+
 install:
-    - pip install -r ProyectoAPI/Autenticacion1718G2/requirements.txt
+    - pip install -r /requirements.txt
+	    - pip install -1 Django==$DJANGO_VERSION
+	    - pip install coverage
 
 sudo: required
 
@@ -42,7 +47,7 @@ deploy:
   on:
     branch: master
 
+after_success: coverage report
 
 script:
-    - "python manage.py test"
-   
+    - coverage run python manage.py test
