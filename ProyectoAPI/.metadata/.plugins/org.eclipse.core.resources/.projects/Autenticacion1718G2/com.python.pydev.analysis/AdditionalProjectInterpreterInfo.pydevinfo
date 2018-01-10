@@ -10,9 +10,9 @@ principal.models|1515466319904155000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI
 principal.tests|1515166625450849000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\tests.py
 principal.apps|1515166625381840000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\apps.py
 Autenticacion1718G2.settings|1515423890797523000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\settings.py
-Autenticacion1718G2.urls|1515469101217536000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\urls.py
+Autenticacion1718G2.urls|1515503001140990000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\urls.py
 manage|1515166625365838000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\manage.py
-principal.views2|1515469180391963000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\views2.py
+principal.views2|1515503055228515000|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\views2.py
 -- END DISKCACHE
 -- START DICTIONARY
 17
@@ -40,7 +40,7 @@ all|1|ALLOWED_HOSTS!11@
 app|1|application!19@
 aut|2|AUTH_PASSWORD_VALIDATORS!11@AUTHENTICATION_BACKENDS!11@
 bas|1|BASE_DIR!11@
-che|1|checkTokenUser!26@
+che|2|checkToken!26@checkTokenUser!26@
 com|1|COMUNIDADES!35@
 dat|1|DATABASES!11@
 deb|1|DEBUG!11@
