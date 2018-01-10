@@ -45,4 +45,4 @@ deploy:
 
 script:
     - "python manage.py test"
-    - pytest
+   
