@@ -6,7 +6,7 @@ python:
 
 
 install:
-    - "pip install -r ProyectoAPI/Autenticacion1718G2/requirements.txt"
+    - pip install -r ProyectoAPI/Autenticacion1718G2/requirements.txt
 
 sudo: required
 
@@ -14,8 +14,8 @@ services:
   - docker
 
 before_install:
-  # INSERTAR AQUÕ LÕNEA PARA DESENCRIPTAR CLAVE DE ACCESO AL SERVIDOR DE DESPLIEGUE,
-  #    PROPORCIONADA POR INTEGRACI”N
+  # INSERTAR AQU√ç L√çNEA PARA DESENCRIPTAR CLAVE DE ACCESO AL SERVIDOR DE DESPLIEGUE,
+  #    PROPORCIONADA POR INTEGRACI√ìN
 
   # INICIO DE DESPLIEGUE EN UN CONTENEDOR DE LA BASE DE DATOS DEL SISTEMA DE 
   #    VOTACIONES
@@ -32,7 +32,7 @@ before_install:
 before_deploy:
   - chmod 600 deploy && mv deploy ~/.ssh/id_rsa
   - curl -O https://raw.githubusercontent.com/EGC-G2-Trabajo-1718/integracion/master/tools/deploy.sh
-  # ADMINISTRACI”N DE VOTACIONES: DESCOMENTAR SIGUIENTE LÕNEA
+  # ADMINISTRACI√ìN DE VOTACIONES: DESCOMENTAR SIGUIENTE L√çNEA
   # - scp target/*.war deploy@egc.duckdns.org:g2/tmp/ROOT.war
 
 deploy:
