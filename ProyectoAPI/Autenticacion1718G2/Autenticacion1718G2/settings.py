@@ -10,7 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-import os
+#! / usr / bin / python
+# -*- coding: utf-8 -*-
+import os, sys
+
 from django.conf.global_settings import EMAIL_BACKEND
 from rest_auth.tests.settings import REST_FRAMEWORK
 
