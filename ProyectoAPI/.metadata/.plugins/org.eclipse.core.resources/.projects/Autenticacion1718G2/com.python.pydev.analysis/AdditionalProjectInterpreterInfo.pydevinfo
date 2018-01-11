@@ -1,0 +1,91 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\.metadata\.plugins\org.eclipse.core.resources\.projects\Autenticacion1718G2\com.python.pydev.analysis\v2_indexcache
+principal.admin|1515166625374839000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\admin.py
+principal.serializers|1515452494769809000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\serializers.py
+Autenticacion1718G2.__init__|1515166625307330000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\__init__.py
+Autenticacion1718G2.wsgi|1515166625325833000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\wsgi.py
+principal.views|1515684021934814000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\views.py
+principal.__init__|1515166625369837000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\__init__.py
+principal.models|1515686428976682000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\models.py
+principal.tests|1515166625450849000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\tests.py
+principal.apps|1515166625381840000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\principal\apps.py
+Autenticacion1718G2.settings|1515423890797523000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\settings.py
+Autenticacion1718G2.urls|1515670833792175000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\Autenticacion1718G2\urls.py
+manage|1515166625365838000|C:\Users\josecarlos\Desktop\Aut que vale en mi eclipse MAS ACTUAL\ProyectoAPI\Autenticacion1718G2\manage.py
+-- END DISKCACHE
+-- START DICTIONARY
+17
+7=principal.serializers
+9=Usuario
+2=Autenticacion1718G2.wsgi
+12=TokenSerializer.Meta
+13=UserSerializer
+4=principal.models
+10=UserSerializer.Meta
+6=principal.apps
+1=Autenticacion1718G2.settings
+5=Autenticacion1718G2.urls
+16=PrincipalConfig
+17=PostUser
+3=principal.views
+11=RoleSerializer.Meta
+14=RoleSerializer
+8=JSONResponse
+15=TokenSerializer
+-- END DICTIONARY
+-- START TREE 1
+30
+all|1|ALLOWED_HOSTS!11@
+app|1|application!19@
+aut|2|AUTH_PASSWORD_VALIDATORS!11@AUTHENTICATION_BACKENDS!11@
+bas|1|BASE_DIR!11@
+che|2|checkToken!26@checkTokenUser!26@
+com|1|COMUNIDADES!35@
+dat|1|DATABASES!11@
+deb|1|DEBUG!11@
+ema|1|EMAIL_BACKEND!11@
+gen|1|GENEROS!35@
+get|4|getUsersByRole!26@getUsers!26@getRoleUser!26@getUser!26@
+ins|1|INSTALLED_APPS!11@
+jso|1|JSONResponse!25@
+lan|1|LANGUAGE_CODE!11@
+mid|1|MIDDLEWARE!11@
+pos|2|PostUser!25@post_list!43@
+pri|1|PrincipalConfig!49@
+res|1|REST_FRAMEWORK!11@
+rol|2|RoleSerializer!57@ROLES!35@
+roo|1|ROOT_URLCONF!11@
+sec|1|SECRET_KEY!11@
+sit|1|SITE_ID!11@
+sta|1|STATIC_URL!11@
+tem|1|TEMPLATES!11@
+tim|1|TIME_ZONE!11@
+tok|1|TokenSerializer!57@
+url|1|urlpatterns!43@
+use|4|USE_TZ!11@UserSerializer!57@USE_I18N!11@USE_L10N!11@
+usu|1|Usuario!33@
+wsg|1|WSGI_APPLICATION!11@
+-- END TREE
+-- START TREE 2
+19
+__i|1|__init__!8&26@
+__u|1|__unicode__!9&34@
+age|1|age!9&35@
+aut|1|autonomous_community!9&35@
+cre|3|create!10&58@create!11&58@create!12&58@
+ema|1|email!9&35@
+fie|3|fields!10&59@fields!11&59@fields!12&59@
+gen|1|genre!9&35@
+met|3|Meta!13&57@Meta!14&57@Meta!15&57@
+mod|3|model!10&59@model!11&59@model!12&59@
+msg|1|msg!9&35@
+nam|2|name!9&35@name!16&51@
+que|1|queryset!17&27@
+res|1|result!9&35@
+rol|1|role!9&35@
+ser|1|serializer_class!17&27@
+sur|1|surname!9&35@
+use|1|username!9&35@
+usu|1|usuario!9&35@
+-- END TREE
