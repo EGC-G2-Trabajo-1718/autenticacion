@@ -27,6 +27,3 @@ class Usuario(models.Model):
     
     def __unicode__(self):
         return self.name
-    
-    def crearUser(self):
-        return User.objects.create_user(username="prueba", email="prueba@gmail.com", password="pruebaprueba")

@@ -1,0 +1,15 @@
+INSTUPprincipal.views
+C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\views.py
+INFOS:&&1|1|2|0&&2|3|2|1&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&1|8|2|0&&3|9|2|8&&3|10|2|8&&2|11|2|0&&2|12|2|0
+getRoleUser=6
+getUsersByRole=7
+checkTokenUser=11
+getUser=5
+queryset=9
+checkToken=12
+PostUser=8
+serializer_class=10
+principal.views=2
+getUsers=4
+__init__=3
+JSONResponse=1
