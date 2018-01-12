@@ -3,7 +3,7 @@ services:
   db:
    image: mysql
    environment:
-     MYSQL_ROOT_PASSWORD: nothing
+     MYSQL_ROOT_PASSWORD: egc
      MYSQL_DATABASE: 	autenticacion
      MYSQL_USER: auth-user
      MYSQL_PASSWORD: egc
