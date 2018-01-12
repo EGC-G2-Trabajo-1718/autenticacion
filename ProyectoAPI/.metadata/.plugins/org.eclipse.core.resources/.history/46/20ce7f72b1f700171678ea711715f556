@@ -1,0 +1,12 @@
+'''
+Created on 12 ene. 2018
+
+@author: Jose Carlos
+'''
+
+from django.contrib.auth.forms import UserCreationForm
+
+class Registro(UserCreationForm):
+    class Meta:
+        model = User
+        fields= ['first_name', 'age']  

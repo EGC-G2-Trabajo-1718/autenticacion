@@ -10,9 +10,11 @@ from rest_framework.renderers import JSONRenderer
 from django.contrib.auth.models import User 
 from rest_framework.decorators import api_view 
 from rest_framework import viewsets
-
+from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import CreateView
+from django.core.urlresolvers import  reverse_lazy
 from rest_framework.authtoken.models import Token
-
+from principal.forms import RegistroForm
 # Create your views here.
 
 class JSONResponse(HttpResponse):
@@ -25,7 +27,7 @@ class JSONResponse(HttpResponse):
 @api_view(['GET'])
 def getUsers(request):
     if request.method == 'GET':
-        usuarios = Usuario.objects.all()
+        usuarios = User.objects.all()
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
 
@@ -79,7 +81,7 @@ def getUsersByRole(request, rol):
 class PostUser(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UserSerializer
-    
+  
 # def loguearte(usernombre):    
 #     parametros = urllib.urlencode({'username': usernombre,'password':'abcdabcd'})
 #     cabeceras = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
@@ -127,4 +129,9 @@ def checkToken(request, tokenUrl):
 
    
 
+class RegistroUsuario(CreateView):
+    model = User 
+    template_name = "nuevousuario.html"
+    form_class = RegistroForm
+    #success_url = reverse_lazy('')
     

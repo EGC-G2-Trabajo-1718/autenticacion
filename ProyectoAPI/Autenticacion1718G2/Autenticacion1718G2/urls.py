@@ -13,11 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
 from django.conf.urls import url, include
 from django.contrib import admin
 from principal import views
 from rest_framework.urlpatterns import format_suffix_patterns
-from principal.views import PostUser
+from principal.views import PostUser, RegistroUsuario
 
 
 
@@ -35,8 +36,7 @@ urlpatterns = [
     url(r'^getRoleUser/(.+)/$', views.getRoleUser),
     url(r'^getUsersByRole/(.+)/$', views.getUsersByRole),
     url(r'^postUser/$', post_list, name='post_list'), 
-    
-    url(r'^checkTokenUser/(.+)/(.+)/$',views.checkTokenUser), 
+    url(r'^registrar/$',RegistroUsuario.as_view(),name="registrar"), 
     url(r'^checkToken/(.+)/$',views.checkToken),
     #token
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

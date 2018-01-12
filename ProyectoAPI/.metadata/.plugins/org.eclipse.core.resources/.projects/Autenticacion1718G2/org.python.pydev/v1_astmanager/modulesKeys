@@ -7,8 +7,11 @@ manage|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\manage.py
 principal.__init__|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\__init__.py
 principal.admin|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\admin.py
 principal.apps|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\apps.py
+principal.forms|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\forms.py
 principal.migrations.0001_initial|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\migrations\0001_initial.py
-principal.migrations.0002_auto_20180103_1919|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\migrations\0002_auto_20180103_1919.py
+principal.migrations.0002_remove_usuario_edad|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\migrations\0002_remove_usuario_edad.py
+principal.migrations.0003_remove_usuario_username|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\migrations\0003_remove_usuario_username.py
+principal.migrations.0004_usuario_username|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\migrations\0004_usuario_username.py
 principal.migrations.__init__|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\migrations\__init__.py
 principal.models|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\models.py
 principal.serializers|C:\Users\josecarlos\Desktop\Aut\ProyectoAPI\Autenticacion1718G2\principal\serializers.py
