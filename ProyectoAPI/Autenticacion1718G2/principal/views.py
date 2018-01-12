@@ -26,11 +26,11 @@ class JSONResponse(HttpResponse):
         super(JSONResponse, self).__init__(content, **kwargs)
 
 
-def getUsers(request):
-    if request.method == 'GET':
-        usuarios = Usuario.objects.all()
-        serializer = UserSerializer(usuarios, many=True)
-        return JSONResponse(serializer.data)
+#def getUsers(request):
+ #   if request.method == 'GET':
+  #      usuarios = Usuario.objects.all()
+   #     serializer = UserSerializer(usuarios, many=True)
+    #    return JSONResponse(serializer.data)
 
 
 def getUser(request, usern):
