@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render, render_to_response, get_object_or_404
-from principal.models import Usuario
-from django.template import RequestContext
-from principal.serializers import UserSerializer, RoleSerializer
-from rest_framework import generics
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
-from django.contrib.auth.models import User 
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.decorators import api_view 
-from rest_framework import viewsets, status
 
+from principal.models import Usuario
+from principal.serializers import UserSerializer, RoleSerializer,\
+    TokenSerializer
+from django.http import HttpResponse
+from rest_framework.renderers import JSONRenderer
+from django.contrib.auth.models import User 
+from rest_framework.decorators import api_view 
+from rest_framework import viewsets
+
+from rest_framework.authtoken.models import Token
 
 # Create your views here.
 
@@ -25,14 +22,14 @@ class JSONResponse(HttpResponse):
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
 
-
+@api_view(['GET'])
 def getUsers(request):
     if request.method == 'GET':
         usuarios = Usuario.objects.all()
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
 
-
+@api_view(['GET'])
 def getUser(request, usern):
     if request.method == 'GET':
         #dato = get_object_or_404(Usuario, username=usern)
@@ -40,7 +37,7 @@ def getUser(request, usern):
         serializer = UserSerializer(usuario)
         return JSONResponse(serializer.data)
     
-
+@api_view(['GET'])
 def getRoleUser(request, usern):
     if request.method == 'GET':
         usuario = Usuario.objects.get(username=usern)
@@ -51,15 +48,83 @@ def getRoleUser(request, usern):
         return JSONResponse(serializer.data)
     
     
-
+@api_view(['GET'])
 def getUsersByRole(request, rol):
     if request.method == 'GET':
         usuarios = Usuario.objects.filter(role=rol)
         serializer = UserSerializer(usuarios, many=True)
         return JSONResponse(serializer.data)
+#     
+# def checkToken(request, token, usuarion, passw):
+#     if request.method == 'GET':
+#         tokenCreado = token.TokenEndpoint.create_token_response( uri = "http://127.0.0.1:8000/rest-auth/login/", http_method = "POST", body= {"username": usuarion, "password": passw}, headers = {"content-type": "application/json"}, credentials = None, grant_type_for_scope = None, claims = None)#averiguar como apartir del token sacar el usuario
+#         if(tokenCreado == token):
+#             r = 'True'
+#             m= 'Successfull'
+#             serializer = TokenSerializer({'result': r, 'msg': m})
+#         return JSONResponse(serializer.data)    
+      
+# class UserView(RetrieveAPIView):
+#     model = User
+#     serializer_class = UserSerializer
+# 
+#     def retrieve(self, request, pk=None):
+#         """
+#         If provided 'pk' is "me" then return the current user.
+#         """
+#         if request.user and pk == 'me':
+#             return Response(UserSerializer(request.user).data)
+#         return super(UserView, self).retrieve(request, pk)
     
 class PostUser(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UserSerializer
+    
+# def loguearte(usernombre):    
+#     parametros = urllib.urlencode({'username': usernombre,'password':'abcdabcd'})
+#     cabeceras = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
+#     abrir_conexion = httplib.HTTPConnection("http://localhost:8000/api-token-auth/:8000")
+#     abrir_conexion.request("POST", parametros, cabeceras)
+#     respuesta = abrir_conexion.getresponse()
+#     print respuesta.status
+# #     ver_source = respuesta.read()
+#     #Esto es opcional -> print ver_source
+#     abrir_conexion.close()  
+
+# 
+@api_view(['GET'])
+def checkTokenUser(request, nomUs, tokenUrl): 
+    
+    if request.method == 'GET':
+        user1 = User.objects.get(auth_token = tokenUrl)
+        # token2, created = Token.objects.get_or_create(user=user1)
+        #     if(token2[0].key ==  "354e8d2fc57118eb680daf5e533e799dff64692d"):
+        if(user1.username == nomUs):
+            r = 'True'
+            m= 'Successfull'
+        else:
+            r = 'False'
+            m ='Error'
+        serializer = TokenSerializer({'result': r, 'msg': m})
+        return JSONResponse(serializer.data)    
+
+   
+
+@api_view(['GET'])
+def checkToken(request, tokenUrl):     
+    
+    if request.method == 'GET':
+        user1 = User.objects.get(auth_token = tokenUrl)
+        token2, created = Token.objects.get_or_create(user=user1)
+        if(token2.key ==  tokenUrl):
+            r = 'True'
+            m= 'Successfull'
+        else:
+            r = 'False'
+            m ='Error'
+        serializer = TokenSerializer({'result': r, 'msg': m})
+        return JSONResponse(serializer.data)      
+
+   
 
     

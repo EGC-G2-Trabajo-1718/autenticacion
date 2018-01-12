@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from django.conf.global_settings import EMAIL_BACKEND
-from rest_auth.tests.settings import REST_FRAMEWORK
+#from rest_auth.tests.settings import REST_FRAMEWORK
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +27,9 @@ SECRET_KEY = 'jgt*3%re3ft=l$v$avc#ra^t3ooub+f8c80m_%8qw1%z5l$0x2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'0.0.0.0']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = [u'0.0.0.0']
+
 
 
 # Application definition
@@ -101,14 +103,20 @@ WSGI_APPLICATION = 'Autenticacion1718G2.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'autenticaciondb',
-	'USER': 'egc',
-	'PASSWORD':'egc',
-	'HOST':'db',
-    'PORT': 3306,
-    }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+  }
 }
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': 'autenticaciondb',
+# 	'USER': 'egc',
+# 	'PASSWORD':'egc',
+# 	'HOST':'db',
+#     'PORT': 3306,
+#     }
+# }
 
 
 # Password validation

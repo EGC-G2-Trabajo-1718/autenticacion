@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import models
+
+from django.contrib.auth.models import User
+from numpy import unique
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+from django.conf import settings
+
+
+ROLES=(('ASISTENTE','Asistente'),('PONENTE',"Ponente"),('AMBOS','Ambos'))
+GENEROS=(('MASCULINO','Masculino'),('FEMENINO',"Femenino"))
+COMUNIDADES=(('ANDALUCIA','Andalucia'),('ARAGON','Aragon'),('ASTURIAS','Asturias'),('CANTABRIA','Cantabria'),('CASTILLA LA MANCHA','Castilla la mancha'),('CASTILLA LEON','Castilla leon'),('EXTREMADURA','Extremadura'),('GALICIA','Galicia'),('LA RIOJA','La rioja'),('MADRID','Madrid'),('MURCIA','Murcia'),('NAVARRA','Navarra'),('PAIS VASCO','Pais vasco'),('VALENCIA','Valencia'),('BALEARES','Baleares'),('CANARIAS','Canarias'),('CEUTA','Ceuta'),('MELILLA','Melilla'))
+
+class Usuario(models.Model):
+    usuario = models.OneToOneField(User, primary_key=True)
+    username = models.CharField(max_length=50, unique=True)
+    genre = models.CharField(max_length=20,choices=GENEROS, default='-----')
+    passwordUser = models.CharField(max_length = 100)
+    role = models.CharField(max_length=10, choices=ROLES, default='ASISTENTE')
+    age = models.PositiveIntegerField()
+    autonomous_community = models.CharField(max_length=50,choices=COMUNIDADES, default='-----')
+    name = models.CharField(max_length=50)
+    surname = models.CharField(max_length=50)
+    email = models.EmailField(max_length=75)
+    msg = 'Successfull'
+    result = 'True'
+    
+    def __unicode__(self):
+        return self.name
+
+
+#     def asociar_usuario_con_user(self, pass1, pass2):
+#         userCreado = User.objects.create(username= self.username, password1 = pass1, password2= pass2, email=self.email)
+#         userCreado.save()
+    @receiver(post_save, sender=settings.AUTH_USER_MODEL)
+    def create_auth_token(self,sender, created=False, **kwargs):
+        if created:
+            Token.objects.create(user=self.username)
+
+    
+    
