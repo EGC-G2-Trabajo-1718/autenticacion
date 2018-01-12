@@ -126,6 +126,7 @@ DATABASES = {
     'PASSWORD':'egc',
     'HOST':'172.18.2.2',
     'PORT': 3306,
+    'TEST_NAME': 'test_autenticacion'
     }
 }
 # DATABASES = {
