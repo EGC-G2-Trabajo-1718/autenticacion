@@ -27,8 +27,8 @@ SECRET_KEY = 'jgt*3%re3ft=l$v$avc#ra^t3ooub+f8c80m_%8qw1%z5l$0x2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = [u'0.0.0.0']
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'0.0.0.0']
 
 
 
@@ -100,12 +100,33 @@ WSGI_APPLICATION = 'Autenticacion1718G2.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
   }
+}'''
+'''
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'autenticaciondb',
+    'USER': 'egc',
+    'PASSWORD':'egc',
+    'HOST':'db',
+    'PORT': 3306,
+    }
+}'''
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'autenticacion',
+    'USER': 'auth-user',
+    'PASSWORD':'egc',
+    'HOST':'172.18.2.2',
+    'PORT': 3306,
+    }
 }
 # DATABASES = {
 #     'default': {
